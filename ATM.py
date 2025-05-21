@@ -5,19 +5,19 @@ class ATM:
     def deposit(self, amount):
         if amount > 0:
             self.balance += amount
-            print(f"Deposited: ${amount:.2f}")
+            print(f"Deposited: Shs. {amount:.2f}")
         else:
-            print("Deposit amount must be positive.")
+            print("No depposit made.")
 
     def withdraw(self, amount):
         if 0 < amount <= self.balance:
             self.balance -= amount
-            print(f"Withdrawn: ${amount:.2f}")
+            print(f"Withdrawn: Shs. {amount:.2f}")
         else:
-            print("Invalid withdrawal amount.")
+            print("Insufficient balance.")
 
     def check_balance(self):
-        print(f"Current balance: ${self.balance:.2f}")
+        print(f"Current balance: Shs. {self.balance:.2f}")
         
 def main():
     atm = ATM()
@@ -38,7 +38,7 @@ def main():
         elif choice == '3':
             atm.check_balance()
         elif choice == '4':
-            print("Thank you for using the ATM.")
+            print("Thank you for using Nicho's ATM.")
             break
         else:
             print("Invalid choice. Please try again.")
