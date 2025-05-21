@@ -1,33 +1,36 @@
 class ATM:
-    def __init__(self, balance=0):
-        self.balance = balance
+    balance = 0
 
-    def deposit(self, amount):
+    def deposit(amount):
         if amount > 0:
-            self.balance += amount
-            print(f"Deposited: Shs. {amount:.2f}")
+            balance += amount
+            print(f"Deposited: Shs. {amount}")
+            print(f"New balance: Shs. {balance}")
         else:
             print("No depposit made.")
 
-    def withdraw(self, amount):
-        if 0 < amount <= self.balance:
-            self.balance -= amount
-            print(f"Withdrawn: Shs. {amount:.2f}")
+    def withdraw(amount):
+        if amount <=0:
+            print("Enter a valid withdrawal amount.")
+        elif amount <= balance:
+            balance -= amount
+            print(f"Withdrawn: Shs. {amount}")
+            print(f"New balance: Shs. {balance}")
         else:
             print("Insufficient balance.")
 
-    def check_balance(self):
-        print(f"Current balance: Shs. {self.balance:.2f}")
+    def check_balance(balance):
+        print(f"Current balance: Shs. {balance}")
         
 def main():
     atm = ATM()
     while True:
-        print("\nATM Menu:")
+        print("\nWelcome to Nicho's ATM Menu:")
         print("1. Deposit")
         print("2. Withdraw")
         print("3. Check Balance")
         print("4. Exit")
-        choice = input("Select an option (1-4): ")
+        choice = input("Select an option: ")
 
         if choice == '1':
             amount = float(input("Enter deposit amount: "))
