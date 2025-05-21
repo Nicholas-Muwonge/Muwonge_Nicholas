@@ -1,2 +1,5 @@
 # Muwonge_Nicholas
 RECESS
+Name : MUWONGE NICHOLAS
+RegNo: 23/U/12408/PS
+StdNo: 2300712408
