@@ -34,7 +34,7 @@ def post_to_twitter(text):
         api.update_status(status=text)
         print("✅ Successfully posted to Twitter.")
     except Exception as e:
-        print("❌ Failed to post:", e)
+        print(" Failed to post:", e)
 
 def main():
     prompt = "Write a short tweet about how AI can boost productivity for students."
