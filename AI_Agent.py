@@ -9,7 +9,7 @@ print("OpenAI Key:", os.getenv("OPENAI_API_KEY"))
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 def generate_post(prompt):
-    """Generate a social media post using OpenAI's GPT-3.5-turbo."""
+
     response = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
@@ -37,7 +37,7 @@ def post_to_twitter(text):
         print(" Failed to post:", e)
 
 def main():
-    prompt = "Write a short tweet about how AI can boost productivity for students."
+    prompt = "This is how AI can boost productivity for students."
     post = generate_post(prompt)
     print("Generated Post:\n", post)
     post_to_twitter(post)
