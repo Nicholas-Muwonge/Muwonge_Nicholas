@@ -13,7 +13,6 @@ def organise_files(source_dir, dest_dir):
             shutil.copy(os.path.join(source_dir, filename), ext_dir)
             print(f"Moved {filename} to {ext_dir}")
 if __name__ == "__main__": 
-    
     source_directory = input("Enter the source directory path: ")
     destination_directory = input("Enter the destination directory path: ")
     organise_files(source_directory, destination_directory)
